@@ -3,7 +3,7 @@
 close all; clc;
 
 test_image=imread('test4.png'); %input test image
-%ground=imread('test3_ground.jpeg'); %ground truth image for rmse calculation
+ground=imread('test3_ground.jpeg'); %ground truth image for rmse calculation
 [height,length,~]=size(test_image);%test image size
 
 %4 training images to calculate coefficient matrix
