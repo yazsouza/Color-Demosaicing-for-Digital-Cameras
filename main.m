@@ -109,14 +109,14 @@ end
 figure(1)
 imshow(uint8(demosaiced_image));
 title('Demosaiced Image Linear Regression');
-%rmse = sqrt(immse(uint8(demosaiced_image),ground))%compute rmse, comment out if no ground truth
+rmse = sqrt(immse(uint8(demosaiced_image),ground)) %compute rmse, comment out if no ground truth image
 
 %Using matlabs demosaic function
 matlab_output = demosaic(uint8(test_image), "rggb");
 figure(3)
 imshow(matlab_output)
 title('Demosaiced Image Using Matlab')
-%rmse_matlab = sqrt(immse((matlab_output),ground)) %compute MATLAB rmse
+rmse_matlab = sqrt(immse((matlab_output),ground)) %compute MATLAB rmse
 
 
 function bayer_out=bayer(image_in) %to convert to a bayer image
